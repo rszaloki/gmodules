@@ -6,22 +6,26 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsnd --respawn src/index.ts",
-    "generate": "graphql-codegen"
+    "generate": "graphql-codegen",
+    "debug": "tsnd src/db/index.ts"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
-  "dependencies": {
+  "devDependencies": {
     "@graphql-codegen/add": "^3.1.0",
     "@graphql-codegen/cli": "^2.2.0",
     "@graphql-codegen/graphql-modules-preset": "^2.1.4",
     "@graphql-codegen/typescript": "^2.2.2",
     "@graphql-codegen/typescript-resolvers": "^2.2.1",
+    "@types/sqlite3": "^3.1.7",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
     "apollo-server": "^3.3.0",
     "graphql": "^15.6.0",
     "graphql-import-node": "0.0.4",
     "graphql-modules": "^1.4.4",
-    "ts-node-dev": "^1.1.8",
-    "typescript": "^4.4.3"
+    "sqlite3": "^5.0.2",
+    "ts-node-dev": "^1.1.8"
   }
 }

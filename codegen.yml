@@ -1,6 +1,6 @@
 generates:
   ./src/modules/:
-    schema: './src/modules/**/typedefs/schema.graphql'
+    schema: './src/modules/**/schema.graphql'
     preset: graphql-modules
     presetConfig:
       baseTypesPath: graphql.ts # Where to create the complete schema types
