@@ -1,0 +1,3 @@
+src/modules/*/generated.ts
+src/modules/graphql.ts
+node_modules
