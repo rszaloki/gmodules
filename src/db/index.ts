@@ -58,3 +58,8 @@ export const getProduct = async (productId:number): Promise<DBProduct> => {
     const result = await runQuery<DBProduct>(db, 'select id, name from products where id = $id', {$id:productId});
     return result[0];
 }
+
+export const getProductOrders = async (productId:number): Promise<DBUser[]> => {
+    const result = await runQuery<DBUser>(db, 'select user_id as id, username from orders inner join users on orders.user_id = users.id where product_id = $id', {$id:productId});
+    return result;
+}

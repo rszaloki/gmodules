@@ -1,8 +1,8 @@
 type Query {
-  user(id: ID!): User
+  user(id: Int!): User
 }
 
 type User {
-  id: ID!
+  id: Int!
   username: String!
 }

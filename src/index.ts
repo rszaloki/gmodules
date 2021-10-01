@@ -1,11 +1,14 @@
 import 'graphql-import-node';
 import { ApolloServer } from 'apollo-server';
 import { application } from './application';
+import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
 
 const schema = application.createSchemaForApollo();
 
 const server = new ApolloServer({
-  schema,
+  plugins: [
+    ApolloServerPluginLandingPageGraphQLPlayground(),
+  ],  schema,
 });
 
 server.listen().then(({ url }) => {
